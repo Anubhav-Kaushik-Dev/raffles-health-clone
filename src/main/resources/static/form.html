@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Insurance Claim</title>
+</head>
+<body>
+    <h2>Create Insurance Claim</h2>
+    
+    <form id="claimForm">
+        <label for="customerId">Customer ID:</label>
+        <input type="number" id="customerId" name="customerId" required><br><br>
+
+        <label for="claimAmount">Claim Amount:</label>
+        <input type="number" id="claimAmount" name="claimAmount" step="0.01" required><br><br>
+
+        <label for="policyId">Policy ID:</label>
+        <input type="text" id="policyId" name="policyId"><br><br>
+
+        <button type="submit">Submit Claim</button>
+    </form>
+
+    <h3 id="response"></h3>
+
+    <script>
+        const form = document.getElementById('claimForm');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // prevent page reload
+
+            const data = {
+                customerId: document.getElementById('customerId').value,
+                claimAmount: document.getElementById('claimAmount').value,
+                policyId: document.getElementById('policyId').value
+            };
+
+            fetch('http://localhost:8080/Claim/createClaim', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Basic ' + btoa('username:password') // if basic auth is enabled
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                document.getElementById('response').innerText = JSON.stringify(result, null, 2);
+            })
+            .catch(error => {
+                document.getElementById('response').innerText = 'Error: ' + error;
+            });
+        });
+    </script>
+</body>
+</html>
