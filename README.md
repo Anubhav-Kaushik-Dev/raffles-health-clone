@@ -1,8 +1,8 @@
-**Raffles Health Insurance(Claim module)-Clone **
+## Raffles Health Insurance(Claim module)-Clone
 
 A backend-focused Spring Boot application implementing the Claim Management module of a health insurance platform.
 
-## Features Implemented
+**Features Implemented**
 
 - RESTful APIs developed using Spring Boot following layered architecture
 - Claim management module with CRUD operations
@@ -28,13 +28,13 @@ Containerization: Docker
 Cloud: AWS EC2
 
 **How to Run Locally**
-# Clone repository
+**Clone repository**
 git clone https://github.com/your-username/raffles-health-clone.git
 
-# Build project
+**Build project**
 mvn clean install
 
-# Run application
+**Run application**
 mvn spring-boot:run
 
 **Author**
