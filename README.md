@@ -16,6 +16,16 @@ A backend-focused Spring Boot application implementing the Claim Management modu
 - Containerized the Spring Boot application using Docker and published image to dockerhub
 - Deployed it on AWS EC2 for cloud-based access.
 
+ **Database Structure**
+
+Users table
+Roles table
+Permissions table
+user_roles & role_permissions join tables
+
+NOTE:For Bootstrapping first time,manually create an admin,Role and Permission record using SQL query and use permitAll() for /add-admin end point in SecurityFilterChain.
+NOTE:Second time onward,/add-admin must be authenticated() in SecurityFilterChain.
+
 **Tech Stack**
 
 Backend: Java 8, Spring Boot, Spring MVC
