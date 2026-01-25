@@ -29,7 +29,7 @@ NOTE:For Bootstrapping first time,manually create an admin,Role and Permission r
 
 Backend: Java 8, Spring Boot, Spring MVC |
 Security: Spring Security (RBAC) |
-Persistence: Spring Data JPA ,Hibernate|
+Persistence: Spring Data JPA ,Hibernate |
 Database: MySQL |
 Build Tool: Maven |
 API Documentation & Testing: Swagger, Postman |
@@ -38,7 +38,7 @@ Cloud: AWS EC2
 
 **How to Run Locally**
 **Clone repository**
-git clone https://github.com/your-username/raffles-health-clone.git
+git clone https://github.com/Anubhav-Kaushik-Dev/raffles-health-clone.git
 
 **Build project**
 mvn clean install
