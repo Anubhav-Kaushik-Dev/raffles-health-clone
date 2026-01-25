@@ -46,9 +46,9 @@ mvn clean install
 **Run application**
 mvn spring-boot:run
 
-**Author**
-**Anubhav Kaushik**
-Java Backend Developer
+**Author** 
+**Anubhav Kaushik** |
+Java Backend Developer |
 LinkedIn: https://linkedin.com/in/anubhav-kaushik-dev
 
   
