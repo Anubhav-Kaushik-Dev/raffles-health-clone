@@ -27,13 +27,13 @@ NOTE:For Bootstrapping first time,manually create an admin,Role and Permission r
 
 **Tech Stack**
 
-Backend: Java 8, Spring Boot, Spring MVC
-Security: Spring Security (RBAC)
-Persistence: Spring Data JPA, Hibernate
-Database: MySQL
-Build Tool: Maven
-API Documentation & Testing: Swagger, Postman
-Containerization: Docker
+Backend: Java 8, Spring Boot, Spring MVC |
+Security: Spring Security (RBAC) |
+Persistence: Spring Data JPA ,Hibernate|
+Database: MySQL |
+Build Tool: Maven |
+API Documentation & Testing: Swagger, Postman |
+Containerization: Docker |
 Cloud: AWS EC2
 
 **How to Run Locally**
