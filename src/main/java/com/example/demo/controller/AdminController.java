@@ -18,36 +18,13 @@ import com.example.demo.repository.UserRepository; // your JPA repo
 @RequestMapping("/admin")
 public class AdminController {
 
-    @Autowired
-    private UserRepository userRepository;
-    
-    @Autowired
-    private RoleRepository roleRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
     
   
     @PreAuthorize("hasAuthority('add-user')")
     @PostMapping("/add-user")
     public String addUser(@RequestBody UserDTO userDTO) {
-        // Hash password before saving
-        String hashedPassword = passwordEncoder.encode(userDTO.getPassword());
-        
-        // 2. Fetch Role entity from DB
-        Role role = roleRepository.findByName(userDTO.getRole())
-                .orElseThrow(() -> new RuntimeException("Role not found"));
-
-        // 3. Convert Role → Set<Role>
-        Set<Role> roles = new HashSet<>();
-        roles.add(role);
-        
-        User user = new User();
-        user.setUsername(userDTO.getUsername());
-        user.setPassword(hashedPassword);
-        user.setRoles(roles);
-
-        userRepository.save(user);
+      
         return "User created successfully!";
     }
 }
