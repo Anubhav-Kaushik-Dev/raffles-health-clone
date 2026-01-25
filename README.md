@@ -18,13 +18,12 @@ A backend-focused Spring Boot application implementing the Claim Management modu
 
  **Database Structure**
 
-Users table
-Roles table
-Permissions table
+Users table,
+Roles table,
+Permissions table,
 user_roles & role_permissions join tables
 
-NOTE:For Bootstrapping first time,manually create an admin,Role and Permission record using SQL query and use permitAll() for /add-admin end point in SecurityFilterChain.
-NOTE:Second time onward,/add-admin must be authenticated() in SecurityFilterChain.
+NOTE:For Bootstrapping first time,manually create an admin,Role and Permission record using SQL query and use permitAll() for /add-admin end point in SecurityFilterChain.Second time onward,/add-admin must be authenticated() in SecurityFilterChain.
 
 **Tech Stack**
 
